@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UlarMark | Mark Up Screenshots in Seconds</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Inter:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vuetify CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.11.8/dist/vuetify.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --v-theme-primary: #1976d2;
+        --text-brand: #333333;
+        --text-main: #4a4a4a;
+        --card-bg: #ffffff;
+      }
+      body { font-family: "Inter", "Roboto", sans-serif !important; background-color: #fcfcfc; color: var(--text-main); }
+      .v-application { font-family: "Inter", "Roboto", sans-serif !important; color: var(--text-main); background: transparent !important; }
+      .brand-title-text { font-family: "Fredoka", sans-serif !important; font-weight: 600 !important; color: var(--text-brand) !important; letter-spacing: -0.2px; }
+      .v-btn, .app-store-badge, a { cursor: pointer !important; }
+      .hero-section { padding: 100px 0 60px 0; text-align: center; }
+      .hero-title { font-size: 4rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; color: var(--text-brand); }
+      .hero-subtitle { font-size: 1.4rem; line-height: 1.6; color: var(--text-main); margin-bottom: 32px; max-width: 800px; margin-left: auto; margin-right: auto; }
+      .privacy-badge-hero { display: inline-flex; align-items: center; padding: 8px 16px; background: #f0f7ff; border-radius: 50px; color: var(--v-theme-primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 48px; }
+      .feature-card { background-color: var(--card-bg) !important; border: none !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important; height: 100%; border-radius: 24px !important; }
+      .feature-title { font-size: 1.25rem !important; font-weight: 700 !important; margin-bottom: 8px; color: var(--text-brand); }
+      .shot-placeholder { background: linear-gradient(135deg, #eef4fb, #f8f9fa); border-radius: 12px; border: 1px solid #f0f0f0; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; color: #9bb4cc; }
+      .v-container { max-width: 1100px !important; }
+      .footer { background: #fdfdfd; border-top: 1px solid #eee; padding: 60px 0 40px 0; }
+      .app-store-badge-nav { height: 36px; transition: opacity 0.2s; }
+      .faq-section { background: #fafafa; padding: 80px 0; }
+      [v-cloak] { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app theme="light">
+        <!-- Navigation -->
+        <v-app-bar flat border="bottom" color="white" density="comfortable">
+          <v-container class="d-flex align-center pa-0">
+            <v-img src="assets/icon.svg" width="36" height="36" class="flex-grow-0 mr-2"></v-img>
+            <v-toolbar-title class="brand-title-text text-h5">UlarMark</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <!-- TODO: replace idXXXXXXXXXX with the real App Store id after the app record is created -->
+            <a href="https://apps.apple.com/app/idXXXXXXXXXX">
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83"
+                alt="Download on the Mac App Store"
+                class="app-store-badge-nav mt-1"
+              />
+            </a>
+          </v-container>
+        </v-app-bar>
+
+        <v-main>
+          <!-- Hero -->
+          <section class="hero-section">
+            <v-container>
+              <h1 class="hero-title">Mark Up Screenshots in Seconds</h1>
+              <p class="hero-subtitle">
+                A fast, native macOS app for annotating screenshots and images. Arrows, text,
+                blur, callouts, and more — then copy or save without breaking your flow.
+              </p>
+
+              <div class="privacy-badge-hero">
+                <v-icon icon="mdi-shield-check" class="mr-2" size="small"></v-icon>
+                Local-First Privacy: Your images never leave your device.
+              </div>
+
+              <div class="shot-placeholder mb-16" style="max-width: 1000px; margin: 0 auto;">
+                <div class="text-center">
+                  <v-icon icon="mdi-image-edit-outline" size="64"></v-icon>
+                  <div class="mt-2">Screenshot coming soon</div>
+                </div>
+              </div>
+            </v-container>
+          </section>
+
+          <!-- Features -->
+          <section class="py-16">
+            <v-container>
+              <div class="text-center mb-16">
+                <h2 class="text-h4 font-weight-bold mb-4" style="color: var(--text-brand)">
+                  A Complete Markup Toolkit
+                </h2>
+                <p style="color: var(--text-main)">Everything you need to explain an image clearly.</p>
+              </div>
+
+              <v-row>
+                <v-col cols="12" md="6">
+                  <v-card class="feature-card pa-8" flat>
+                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-arrow-top-right" size="48"></v-icon></div>
+                    <h3 class="feature-title">Precise Annotations</h3>
+                    <p class="text-body-2" style="color: var(--text-main)">
+                      Arrows, lines, boxes, ellipses, text labels, numbered steps, highlighter, and
+                      freehand pencil — every tool you reach for, drawn pixel-accurately.
+                    </p>
+                  </v-card>
+                </v-col>
+                <v-col cols="12" md="6">
+                  <v-card class="feature-card pa-8" flat>
+                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-blur" size="48"></v-icon></div>
+                    <h3 class="feature-title">Redact with Confidence</h3>
+                    <p class="text-body-2" style="color: var(--text-main)">
+                      Blur or pixelate sensitive details before you share. Keep private information
+                      out of every screenshot you send.
+                    </p>
+                  </v-card>
+                </v-col>
+                <v-col cols="12" md="6">
+                  <v-card class="feature-card pa-8" flat>
+                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-spotlight-beam" size="48"></v-icon></div>
+                    <h3 class="feature-title">Draw the Eye</h3>
+                    <p class="text-body-2" style="color: var(--text-main)">
+                      Spotlight to dim everything but the focus, a magnifying loupe for fine detail,
+                      callout bubbles, measure, and emoji or image stamps.
+                    </p>
+                  </v-card>
+                </v-col>
+                <v-col cols="12" md="6">
+                  <v-card class="feature-card pa-8" flat>
+                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-file-document-edit-outline" size="48"></v-icon></div>
+                    <h3 class="feature-title">A Real Editor</h3>
+                    <p class="text-body-2" style="color: var(--text-main)">
+                      Save editable .ularmark documents and reopen them later with every annotation,
+                      the zoom level, and the source image still fully editable. Full undo/redo.
+                    </p>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
+          </section>
+
+          <!-- FAQ -->
+          <section class="faq-section">
+            <v-container>
+              <div class="text-center mb-12">
+                <h2 class="text-h4 font-weight-bold" style="color: var(--text-brand)">Common Questions</h2>
+              </div>
+              <v-row justify="center">
+                <v-col cols="12" md="8">
+                  <v-expansion-panels variant="accordion" class="elevation-0">
+                    <v-expansion-panel elevation="0" rounded="lg" class="mb-2">
+                      <v-expansion-panel-title class="font-weight-bold" style="color: var(--text-brand)">Where are my images stored?</v-expansion-panel-title>
+                      <v-expansion-panel-text class="text-body-2" style="color: var(--text-main)">
+                        Everything stays on your device. UlarMark only opens images you choose and
+                        only writes files you explicitly save or export. Nothing is uploaded.
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                    <v-expansion-panel elevation="0" rounded="lg" class="mb-2">
+                      <v-expansion-panel-title class="font-weight-bold" style="color: var(--text-brand)">Is it a subscription?</v-expansion-panel-title>
+                      <v-expansion-panel-text class="text-body-2" style="color: var(--text-main)">
+                        No. UlarMark is a one-time purchase on the Mac App Store — buy it once and
+                        own it, with no subscription and no in-app purchases.
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                    <v-expansion-panel elevation="0" rounded="lg" class="mb-2">
+                      <v-expansion-panel-title class="font-weight-bold" style="color: var(--text-brand)">What can I open?</v-expansion-panel-title>
+                      <v-expansion-panel-text class="text-body-2" style="color: var(--text-main)">
+                        Paste from the clipboard or open PNG, JPEG, TIFF, GIF, HEIC, WebP, BMP, and
+                        more — via the Open panel, Finder "Open With", or drag-and-drop.
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                    <v-expansion-panel elevation="0" rounded="lg" class="mb-2">
+                      <v-expansion-panel-title class="font-weight-bold" style="color: var(--text-brand)">Does it speak my language?</v-expansion-panel-title>
+                      <v-expansion-panel-text class="text-body-2" style="color: var(--text-main)">
+                        UlarMark ships with 18 interface languages and picks yours automatically from
+                        your system settings.
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                  </v-expansion-panels>
+                </v-col>
+              </v-row>
+            </v-container>
+          </section>
+        </v-main>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <v-container>
+            <v-row>
+              <v-col cols="12" md="4">
+                <div class="d-flex align-center mb-4">
+                  <v-img src="assets/icon.svg" width="24" height="24" class="flex-grow-0 mr-2"></v-img>
+                  <span class="brand-title-text text-h6">UlarMark</span>
+                </div>
+                <p class="text-body-2 mb-6" style="color: var(--text-main)">
+                  Mark up screenshots and images on your Mac — fast, native, and private.
+                </p>
+              </v-col>
+              <v-col cols="12" md="4">
+                <h4 class="font-weight-bold mb-4" style="color: var(--text-brand)">Support &amp; Privacy</h4>
+                <v-list density="compact" class="bg-transparent pa-0">
+                  <v-list-item class="pa-0" href="mailto:hello@ular.io">
+                    <v-list-item-title class="text-body-2" style="color: var(--text-main)">Technical Support</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item class="pa-0" href="https://github.com/ular-io/ular-mark-support/discussions" target="_blank" rel="noopener noreferrer">
+                    <v-list-item-title class="text-body-2" style="color: var(--text-main)">Community Discussions</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item class="pa-0" href="https://github.com/ular-io/ular-mark-support/issues" target="_blank" rel="noopener noreferrer">
+                    <v-list-item-title class="text-body-2" style="color: var(--text-main)">Report a Bug</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item class="pa-0" href="privacy.html">
+                    <v-list-item-title class="text-body-2" style="color: var(--text-main)">Privacy Policy</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item class="pa-0" href="terms.html">
+                    <v-list-item-title class="text-body-2" style="color: var(--text-main)">Terms of Service</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item class="pa-0" href="open-source-licenses.html">
+                    <v-list-item-title class="text-body-2" style="color: var(--text-main)">Open-Source Licenses</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-col>
+              <v-col cols="12" md="4" class="text-md-right">
+                <h4 class="font-weight-bold mb-4" style="color: var(--text-brand)">Available on</h4>
+                <!-- TODO: replace idXXXXXXXXXX with the real App Store id after the app record is created -->
+                <a href="https://apps.apple.com/app/idXXXXXXXXXX">
+                  <img
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83"
+                    alt="Download on the Mac App Store"
+                    class="app-store-badge-nav"
+                  />
+                </a>
+              </v-col>
+            </v-row>
+            <v-divider class="my-8"></v-divider>
+            <div class="d-flex flex-column flex-md-row justify-space-between text-caption ga-4" style="color: var(--text-main)">
+              <div>© 2026 UlarioSoft. All rights reserved.</div>
+              <div class="d-flex ga-4"><span>Native screenshot markup for macOS</span></div>
+            </div>
+          </v-container>
+        </footer>
+      </v-app>
+    </div>
+
+    <!-- Vue & Vuetify Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.5.28/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.11.8/dist/vuetify.min.js"></script>
+    <script>
+      const { createApp } = Vue;
+      const { createVuetify } = Vuetify;
+      const vuetify = createVuetify();
+      createApp({ setup() { return {}; } }).use(vuetify).mount("#app");
+    </script>
+  </body>
+</html>
