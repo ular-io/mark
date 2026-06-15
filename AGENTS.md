@@ -16,7 +16,7 @@ Static landing page + legal pages for the UlarMark macOS app, served via GitHub 
 - `CNAME` — `mark.ular.io`
 
 ## TODO before launch
-- Replace `idXXXXXXXXXX` in the App Store badge links once the app record exists on ASC.
+- App Store badge links use the real app id (6780572862).
 - Add real product screenshots (currently placeholder tiles).
 - DNS: point `mark.ular.io` (CNAME → `ular-io.github.io`) — owner sets this in the DNS console.
 
