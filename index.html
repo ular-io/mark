@@ -35,6 +35,8 @@
       .feature-card { background-color: var(--card-bg) !important; border: none !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important; height: 100%; border-radius: 24px !important; }
       .feature-title { font-size: 1.25rem !important; font-weight: 700 !important; margin-bottom: 8px; color: var(--text-brand); }
       .shot-placeholder { background: linear-gradient(135deg, #eef4fb, #f8f9fa); border-radius: 12px; border: 1px solid #f0f0f0; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; color: #9bb4cc; }
+      .hero-shot { border-radius: 16px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); border: 1px solid #f0f0f0; }
+      .feature-shot { border-radius: 12px; border: 1px solid #f0f0f0; aspect-ratio: 16/10; }
       .v-container { max-width: 1100px !important; }
       .footer { background: #fdfdfd; border-top: 1px solid #eee; padding: 60px 0 40px 0; }
       .app-store-badge-nav { height: 36px; transition: opacity 0.2s; }
@@ -76,12 +78,13 @@
                 Local-First Privacy: Your images never leave your device.
               </div>
 
-              <div class="shot-placeholder mb-16" style="max-width: 1000px; margin: 0 auto;">
-                <div class="text-center">
-                  <v-icon icon="mdi-image-edit-outline" size="64"></v-icon>
-                  <div class="mt-2">Screenshot coming soon</div>
-                </div>
-              </div>
+              <v-img
+                src="assets/hero.png"
+                alt="UlarMark editor marking up a screenshot"
+                class="hero-shot mb-16"
+                width="1000"
+                style="max-width: 1000px; margin: 0 auto;"
+              ></v-img>
             </v-container>
           </section>
 
@@ -98,41 +101,45 @@
               <v-row>
                 <v-col cols="12" md="6">
                   <v-card class="feature-card pa-8" flat>
-                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-arrow-top-right" size="48"></v-icon></div>
-                    <h3 class="feature-title">Precise Annotations</h3>
+                    <v-img src="assets/feature1.png" alt="Arrows, boxes, and text annotations on a screenshot" class="feature-shot mb-6" cover></v-img>
+                    <h3 class="feature-title">Numbered Steps &amp; Callouts</h3>
                     <p class="text-body-2" style="color: var(--text-main)">
-                      Arrows, lines, boxes, ellipses, text labels, numbered steps, highlighter, and
-                      freehand pencil — every tool you reach for, drawn pixel-accurately.
+                      Number every step with badges in circles or squares — decimal, alphabetical, or
+                      Roman — that renumber themselves automatically. Add speech and thought bubbles in
+                      a dozen styles, from clean ovals to comic-book explosions.
                     </p>
                   </v-card>
                 </v-col>
                 <v-col cols="12" md="6">
                   <v-card class="feature-card pa-8" flat>
-                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-blur" size="48"></v-icon></div>
-                    <h3 class="feature-title">Redact with Confidence</h3>
+                    <v-img src="assets/feature2.png" alt="Blurred and pixelated sensitive details in a screenshot" class="feature-shot mb-6" cover></v-img>
+                    <h3 class="feature-title">Shapes &amp; Arrows for Every Point</h3>
                     <p class="text-body-2" style="color: var(--text-main)">
-                      Blur or pixelate sensitive details before you share. Keep private information
-                      out of every screenshot you send.
+                      Straight or curved arrows with a choice of heads, boxes, ellipses, and lines —
+                      each in solid, dashed, or dotted strokes. Sweep a highlighter, underline, or
+                      scribble freehand to draw the eye exactly where you want it.
                     </p>
                   </v-card>
                 </v-col>
                 <v-col cols="12" md="6">
                   <v-card class="feature-card pa-8" flat>
-                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-spotlight-beam" size="48"></v-icon></div>
-                    <h3 class="feature-title">Draw the Eye</h3>
+                    <v-img src="assets/feature3.png" alt="Spotlight, magnifier loupe, and callout bubbles drawing focus" class="feature-shot mb-6" cover></v-img>
+                    <h3 class="feature-title">Style Every Detail</h3>
                     <p class="text-body-2" style="color: var(--text-main)">
-                      Spotlight to dim everything but the focus, a magnifying loupe for fine detail,
-                      callout bubbles, measure, and emoji or image stamps.
+                      Every tool opens a full property panel — border thickness, color, and style, fill
+                      and shadow, corner roundness, bubble shape and tail. Tweak anything and watch it
+                      update live on the canvas.
                     </p>
                   </v-card>
                 </v-col>
                 <v-col cols="12" md="6">
                   <v-card class="feature-card pa-8" flat>
-                    <div class="shot-placeholder mb-6"><v-icon icon="mdi-file-document-edit-outline" size="48"></v-icon></div>
-                    <h3 class="feature-title">A Real Editor</h3>
+                    <v-img src="assets/feature4.png" alt="Editable .ularmark document reopened with all annotations" class="feature-shot mb-6" cover></v-img>
+                    <h3 class="feature-title">Build Your Own Tools</h3>
                     <p class="text-body-2" style="color: var(--text-main)">
-                      Save editable .ularmark documents and reopen them later with every annotation,
-                      the zoom level, and the source image still fully editable. Full undo/redo.
+                      Save any tool with its exact style as a reusable custom tool, star the ones you
+                      use most, and grab them instantly from the sidebar — your markup kit, set up
+                      your way.
                     </p>
                   </v-card>
                 </v-col>
